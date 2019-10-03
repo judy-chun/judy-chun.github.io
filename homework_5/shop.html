@@ -1,0 +1,209 @@
+<!----------------------------
+Name: Judy Chun
+shop.html is the product browsing page
+
+----------------------------->
+
+<html>
+<head>
+	<!-- Linking to the CSS stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/homework_5.css"></link>
+</head>
+
+<body>
+	<hr class="top-bar" size="50"/>
+	<!-- Creating the top sticky navigation bar with menu items -->
+	<div class="navbar">
+		<a class="navbar-link home-button" href="home_page.html">FLUFF STUFF</a>
+		<!-- Positioning the navigation menu items in the center -->
+		<div class="navbar-center">
+			<a class="navbar-link active-title" href="shop.html">Shop</a>
+			<a class="navbar-link" href="#sale">Sale</a>
+			<a class="navbar-link" href="#track">Track Orders</a></li>
+		</div>
+		<!-- Aligning the navigation menu items to the right -->
+		<div class="navbar-right">
+			<a class="navbar-link" href="#bag"><img src="img/bag_icon.png">   My Bag</a>
+			<a class="navbar-link" href="#search"><img src="img/search_icon.png">   Search</a>
+		</div>
+	</div>
+
+	<!-- Creating the collapsible menu with filter categories -->
+	<div class="menu-main">
+		<button class="collapse-menu">Style <img src = "img/expanded_icon.png" style="float:right"></button>
+		<div>
+			<!-- Creating custom checkboxes -->
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Couch Pillow<br>
+				<span class="checkmark"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Bed Pillow<br>
+				<span class="checkmark"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Round Pillow<br>
+				<span class="checkmark"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Floor Poof<br>
+				<span class="checkmark"></span>
+			</label>
+		<hr align="left" width= "100%">
+		</div>
+
+		<!-- Creating the collapsible menu with filter categories -->
+		<button class="collapse-menu">Color<img src = "img/expanded_icon.png" style="float:right"></button>
+		<div>
+			<!-- Creating custom checkboxes -->
+			<label class="checkbox-wrapper">
+				<input type="checkbox">After School<br>
+				<span class="checkmark" id="check-after-school"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Morning Haze<br>
+				<span class="checkmark" id="check-morning-haze"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Cozy Denim<br>
+				<span class="checkmark" id="check-cozy-denim"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Rainy Day<br>
+				<span class="checkmark" id="check-rainy-day"></span>
+			</label>
+		<hr align="left" width= "100%">
+		</div>
+
+		<!-- Creating the collapsible menu with filter categories -->
+		<button class="collapse-menu">Material<img src = "img/expanded_icon.png" style="float:right"></button>
+		<div>
+			<!-- Creating custom checkboxes -->
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Duck Down<br>
+				<span class="checkmark"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Hypoallergenic poly-blend<br>
+				<span class="checkmark"></span>
+			</label>
+			<label class="checkbox-wrapper">
+				<input type="checkbox">Memory Foam<br>
+				<span class="checkmark"></span>
+			</label>
+		<hr align="left" width= "100%">
+		</div>
+
+	</div>	
+
+	<!-- Wrapper for header and thumbnail images-->
+	<div class="shop-main">
+		<!-- Adding a header and select -->
+		<div class="shop-header">
+			<h3 style="display:inline">Shop</h3>
+			<select class="shop-sort-menu" style="width: 200px;">
+				<option value="sort-desc">Sort by price: high to low</option>
+				<option value="sort-asc">Sort by price: low to high</option>
+				<option value="sort-rate">Sort by rating</option>
+				<option value="sort-new">Sort by newest</option>
+			</select>
+		</div>
+
+		<!-- Putting thumbnail images side by side in a grid format -->
+		<div class="shop-grid">
+			<div class="image-row">
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_1.png" alt="Couch pillow" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-yellow"></button>
+						<button class ="color-button" id="button-morning-haze"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Couch Pillow</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png">
+					</div>	
+				</div>					
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_2.png" alt="Round pillow" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-rainy-day"></button>
+						<button class ="color-button" id="button-cozy-denim"></button>
+						<button class ="color-button" id="button-morning-haze"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Round Pillow</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png">
+					</div>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_3.png" alt="Bed pillow" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-cozy-denim"></button>
+						<button class ="color-button" id="button-yellow"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Bed Pillow</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png">
+					</div>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_4.png" alt="Floor poof" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-morning-haze"></button>
+						<button class ="color-button" id="button-rainy-day"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Floor poof</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png">
+					</div>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_5.png" alt="Couch pillow" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-rainy-day"></button>
+						<button class ="color-button" id="button-morning-haze"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Couch Pillow</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png"><img src="img/heart-unfilled.png">
+					</div>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<div class="shop-item">
+						<a class="image-link" href="product.html"><img src="img/shop_6.png" alt="Couch pillow" style="width:100%"></a>
+						<!-- Adding color buttons with inactive and active state -->
+						<button class ="color-button button-active" id="button-yellow"></button>
+						<button class ="color-button" id="button-rainy-day"></button>
+						<button class ="color-button" id="button-cozy-denim"></button>
+						<!-- Placing the item title and description -->
+						<p class="item-title">Couch Pillow</p>
+						<p class="item-price">$40.00</p>
+						<!-- Adding filled and unfilled heart ratings -->
+						<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
