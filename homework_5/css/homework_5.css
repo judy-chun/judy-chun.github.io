@@ -270,6 +270,17 @@ body {
 	font-size: 15px;
 }
 
+/* Customizing the drop down menu for quantity selection*/
+#quantity-menu {
+	font-family: sans-serif;
+	background-color: #eeeeee;
+	color: #000000;
+	border-color: #000000;
+	padding: 8px 16px;
+	height: 70%;
+	font-size: 15px;
+}
+
 /* Customizing the font for item description */
 .item-title {
 	font-size: 18px;
@@ -292,6 +303,11 @@ body {
 	opacity: 0.5;
 }
 
+/* Remove opacity on hover */
+.color-button:hover {
+	opacity: 1;
+}
+
 /* What an active button looks like (will override some of the inactive properties) */
 .button-active {
 	border: 2px solid black;
@@ -299,7 +315,7 @@ body {
 }
 
 /* Tailoring specific buttons (yellow color) */
-#button-yellow {
+#button-after-school {
 	background-color: #FFC700;
 }
 
@@ -396,14 +412,44 @@ body {
 	font-weight: lighter;
 }
 
+/* Color swatch for dropdown menu */
+.color-square {
+	height: 25px;
+	width: 25px;
+	background-color: black;
+	display: inline-block;
+	float: right;	
+	vertical-align: middle;	
+}
+
+/* Color swatch for dropdown main button */
+.color-square-display {
+	height: 25px;
+	width: 25px;
+	background-color: black;
+	display: inline-block;
+	float: right;	
+	vertical-align: middle;
+}
+
+/* Hides object */
+.hidden {
+	display: none !important;
+}
+
+/* FLoat right */
+.right-float {
+	float: right;
+}
+
 /* Positioning the dropdown */
-.color-dropdown {
+.color-dropdown, .material-dropdown {
 	position: relative;
 	display: inline-block;
 }
 
 /* Customizing the color and text of the dropdown button */
-.color-dropdown-button {
+.color-dropdown-button, .material-dropdown-button {
 	background-color: #ffffff;
 	color: #000000;
 	padding: 16px;
@@ -416,8 +462,14 @@ body {
 	height: 60px;
 }
 
+/* Shift images up a little bit */
+.right-float > img {
+	top: -3px;
+	position: relative;
+}
+
 /* Displaying the dropdown menu content and setting shadow for dropdown */
-.color-dropdown-content {
+.color-dropdown-content, .material-dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: #f1f1f1;
@@ -426,40 +478,50 @@ body {
 	z-index: 1;
 }
 
+/* Removing blue border from drowndown menu when focused */
+.color-dropdown-content:focus, .material-dropdown-content:focus {
+	outline: 0;
+}
+
 /* Customizing the text in dropdown menu */
-.color-dropdown-content a {
+.color-dropdown-content div, .material-dropdown-content div {
 	color: black;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 	font-size: 16px;
 	font-weight: lighter;
+	width: 100%;
+	text-align: left;
 }
 
 /* Setting the hover state for dropdown menu */
-.color-dropdown-content a:hover {
+.color-dropdown-content div:hover, .material-dropdown-content div:hover {
 	background-color: #cfcfcf;
 }
 
-/* Setting the position of color swatch images in dropdown */
+/* Setting the position of color swatch images in dropdown 
 .color-dropdown-content img {
 	float: right;
 }
 
 /* Displaying the content when hover state of button is selected */
-.color-dropdown:hover .color-dropdown-content {
+.color-dropdown-content-hover, .material-dropdown-content-hover {
 	display: block;
 }
 
 /* Setting the hover state color for dropdown menu button */
-.color-dropdown:hover .color-dropdown-button {
-	background-color: #5974FF;
+.color-dropdown:hover .color-dropdown-button, .material-dropdown:hover .material-dropdown-button {
+	/*background-color: #f5f5f5;*/
 	border: 1px solid black;
-	color: white;
+	color: black;
 }
 
 /* Customizing the text field */
 .text-field {
+	width: 100%;
+	position: inline;
+	height: 7%;
 	padding-top: 20px;
 	font-size: 16px;
 }
@@ -477,3 +539,155 @@ body {
 	width: 200px;
 	height: 60px;
 }
+
+/* Displays the header for item and price */
+.split-header {
+	display: block;
+}
+
+/* Aligns the header labelings for item and price to left and right */
+.split-header span{
+	display: block;
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+/* Aligns the Shopping bag header to the left */
+.cart-header {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+/* Aligns the list of items in cart to the left */
+.cart-body {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+/* Display shopping cart item in grid layout */
+.cart-item {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 20px;
+}
+
+.grid-item1 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.grid-item2 {
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.grid-item3 {
+	grid-column-start: 4;
+	grid-column-end: 8;
+}
+
+.grid-item4 {
+	grid-column-start: 8;
+	grid-column-end: 9;
+}
+
+/* Customizing the shopping cart header */
+.cart-item-header {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+/* Customizing the cart description */
+.cart-item-description {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 17px;
+	font-weight: lighter;
+}
+
+/* Customizing the remove labeling */
+.cart-remove-item {
+	font-family: sans-serif;
+	color: #57BEF5;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+/* Customizing the quantity labeling */
+.cart-quantity {
+	font-family: sans-serif;
+	color: #57BEF5;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+/* Customizing the price labeling */
+.cart-item-price {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	text-align: right;
+}
+
+/* Customizing the cart total labeling */
+.cart-total {
+	width:30%;
+	float: right;
+}
+
+/* Splitting the layout of cart total in left and right side */
+.cart-total-split {
+	display: block;
+}
+
+/* Positioning the right side of the cart total */
+.cart-total-split span{
+	display: block;
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+/* Customizing the cart description */
+.cart-total-description {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+/* Customizing the checkout button */
+.cart-button {
+	width: 100%;
+	background-color: #000000;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: lighter;
+	border-radius: 4px;
+	height: 40px;
+}
+
+/* Customizing the ID of the added string status */
+#added {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: lighter;
+}
+ /* Remove blue border on all buttons */
+button:focus {
+	outline: 0;
+}
+
+/* Remove blue border on all selects */
+select:focus {
+	outline: 0;
+}
+

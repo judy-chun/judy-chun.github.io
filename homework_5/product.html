@@ -7,6 +7,10 @@ product.html is the individual product detail page
 <head>
 	<!-- Linking to the CSS stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/homework_5.css"></link>
+	<!-- Linking to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Linking to the JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -22,7 +26,7 @@ product.html is the individual product detail page
 		</div>
 		<!-- Aligning the navigation menu items to the right -->
 		<div class="navbar-right">
-			<a class="navbar-link" href="#bag"><img src="img/bag_icon.png">   My Bag</a>
+			<a class="navbar-link" href="cart.html"><img src="img/bag_icon.png">   My Bag</a>
 			<a class="navbar-link" href="#search"><img src="img/search_icon.png">   Search</a>
 		</div>
 	</div>
@@ -43,7 +47,7 @@ product.html is the individual product detail page
 		</div>
 		<!-- Positioning large image: width 45% -->
 		<div class="product-large-image">
-			<img class="large-image" src="img/product_1.png" style="cursor:pointer">
+			<img class="large-image" src="img/yellow_pillow.jpeg" style="cursor:pointer">
 		</div>
 		<!-- Position product description: width 30% -->
 		<div class="product-description">
@@ -54,53 +58,75 @@ product.html is the individual product detail page
 			<p class="item-price">$40.00</p>
 			<p class="item-description">Made with 100% cotton & down features inside - perfect for your house!</p>
 			<!-- Adding color buttons with inactive and active state -->
-			<button class ="color-button button-active" id="button-yellow"></button>
+			<button class ="color-button button-active" id="button-after-school"></button>
+			<button class ="color-button" id="button-morning-haze"></button>
 			<button class ="color-button" id="button-rainy-day"></button>
+			<button class ="color-button" id="button-cozy-denim"></button>
 			<br><br>
 
 			<!-- Adding drop down menu for color and material with button class-->
 			<div class="color-dropdown">
-				<button class="color-dropdown-button">After School
-					<img src="img/swatch_1.png" style="vertical-align:middle; float: right">
-					<img src="img/dropdown_icon.png" style="vertical-align:middle">
-				</button>
+				<div class="color-dropdown-button" id="color-dropdown-display">After School
+					<div class="right-float">						
+						<img src="img/dropdown_icon.png">
+						<span class="color-square-display" id="button-after-school"></span>
+					</div>
+				</div>
 				<!-- Putting content for drop down menu with color swatch images-->
-				<div class="color-dropdown-content">
-					<a href="#morning-haze">Morning Haze
-						<img src="img/swatch_3.png" style="vertical-align:middle">
-					</a>
-					<a href="#rainy-day">Rainy Day
-						<img src="img/swatch_4.png" style="vertical-align:middle">
-					</a>
-					<a href="#cozy-denim">Cozy Denim
-						<img src="img/swatch_2.png" style="vertical-align:middle">
-					</a>
+				<div class="color-dropdown-content" tabindex="-1">
+					<div class="hidden">After School
+						<span class="color-square" id="button-after-school"></span>
+					</div>
+					<div>Morning Haze
+						<span class="color-square" id="button-morning-haze"></span>
+					</div>
+					<div>Rainy Day
+						<span class="color-square" id="button-rainy-day"></span>
+					</div>
+					<div>Cozy Denim
+						<span class="color-square" id="button-cozy-denim"></span>
+					</div>
 				</div>
 			</div>
 			<br><br>
 
 			<!-- Adding drop down menu for color and material with button class-->
-			<div class="color-dropdown">
-				<button class="color-dropdown-button">Duck Down
-					<img src="img/dropdown_icon.png" style="vertical-align:middle">
-				</button>
+			<div class="material-dropdown">
+				<div class="material-dropdown-button" id="material-dropdown-display">Duck Down
+					<div class="right-float">						
+						<img src="img/dropdown_icon.png">
+						<span class="color-square-display" style="visibility: hidden"></span>
+					</div>
+				</div>
 				<!-- Putting content for drop down menu-->
-				<div class="color-dropdown-content">
-					<a href="#morning-haze">Hypoallergenic poly-blend</a>
-					<a href="#rainy-day">Memory Foam</a>
+				<div class="material-dropdown-content" tabindex="-1">
+					<div class="material-item hidden" id="button-duck-down">Duck Down</div>
+					<div class="material-item" id="button-hypoallergenic-poly-blend">Hypoallergenic Poly Blend</div>
+					<div class="material-item" id="button-memory-foam">Memory Foam</div>
 				</div>
 			</div>
 
-			<!-- Adding a text field to input quantity-->
+			<!-- Adding a user input field to provide quantity-->
 			<div class="text-field">
-				<form>
-					Quantity:<br>
-				<input type="text" name="quantity" style="height: 40px; width: 40px; margin-top: 10px">
-				</form>
+				Quantity: 
+				<select id="quantity-menu">
+					<option value="1-item">1</option>
+					<option value="2-item">2</option>
+					<option value="3-item">3</option>
+					<option value="4-item">4</option>
+					<option value="5-item">5</option>
+					<option value="6-item">6</option>
+					<option value="7-item">7</option>
+					<option value="8-item">8</option>
+					<option value="9-item">9</option>
+					<option value="10-item">10</option>
+				</select>
 			</div>
+			<br>
 
 			<!-- Adding a button for adding to cart-->
-			<a href="#cart"><button class="add-cart">Add to Cart</button></a>
+			<a href="#cart"><button class="add-cart" onclick="processProduct()">Add to Cart</button></a><br><br>
+			<span id="added"></span>
 			
 		</div>
 
@@ -133,5 +159,7 @@ product.html is the individual product detail page
 
 		
 	</div>
+</body>
+</html>
 
 

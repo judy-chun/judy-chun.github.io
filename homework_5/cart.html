@@ -1,0 +1,106 @@
+<!----------------------------
+Name: Judy Chun
+cart.html is the shopping bag page 
+
+----------------------------->
+<html>
+<head>
+	<!-- Linking to the CSS stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/homework_5.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<hr class="top-bar" size="50"/>
+	<!-- Creating the top sticky navigation bar with menu items -->
+	<div class="navbar">
+		<a class="navbar-link home-button" href="home_page.html">FLUFF STUFF</a>
+		<!-- Positioning the navigation menu items in the center -->
+		<div class="navbar-center">
+			<a class="navbar-link" href="shop.html">Shop</a>
+			<a class="navbar-link" href="#sale">Sale</a>
+			<a class="navbar-link" href="#track">Track Orders</a></li>
+		</div>
+		<!-- Aligning the navigation menu items to the right -->
+		<div class="navbar-right">
+			<a class="navbar-link active-title" href="cart.html"><img src="img/bag_icon.png">   My Bag</a>
+			<a class="navbar-link" id="navbar-search" href="#search"><img src="img/search_icon.png">   Search</a>
+		</div>
+	</div>
+
+	<br>
+
+	<!-- Putting headers -->
+	<div style="margin-left: 16px">
+		<h2>Shopping Bag (2)</h2>
+	</div>
+
+	<!-- Placing the labelings for cart item and price -->
+	<div class="cart-header">
+		<p class="split-header">Item<span>Price</span></p>
+		<hr>
+
+	</div>
+
+	<!-- Creating content for cart -->
+	<div class="cart-body">
+		<!-- Creating a grid container to place item details inside cart-->
+		<div class="cart-item">
+			<div class="grid-item1">
+				<a href="product.html"><img src="img/cart_item_2.png" alt="Couch Pillow"></a>
+			</div>
+			<div class="grid-item2">
+				<p class="cart-item-header">Couch Pillow</p>
+				<br>
+				<p class="cart-item-description">Material: Duck Down<br><br>Color: After School</p>
+				<br>
+				<p class="cart-remove-item">Remove</p>	
+			</div>
+			<div class="grid-item3">
+				<p class="cart-quantity">Quantity 1<img src="img/expand-more.png" style="vertical-align:middle"></p>
+			</div>
+			<div class="grid-item4">
+				<p class="cart-item-price">$40.00</p>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div class="cart-item">
+			<div class="grid-item1">
+				<a href="product.html"><img src="img/cart_item_1.png" alt="Couch Pillow"></a>
+			</div>
+			<div class="grid-item2">
+				<p class="cart-item-header">Bed Pillow</p>
+				<br>
+				<p class="cart-item-description">Material: Duck Down<br><br>Color: After School</p>
+				<br>
+				<p class="cart-remove-item">Remove</p>
+			</div>
+			<div class="grid-item3">
+				<p class="cart-quantity">Quantity 1<img src="img/expand-more.png" style="vertical-align:middle"></p>
+			</div>
+			<div class="grid-item4">
+				<p class="cart-item-price">$50.00</p>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="cart-total">
+		<p class="cart-total-split cart-total-description">Subtotal<span>$90.00</span></p>
+		<br>
+		<p class="cart-total-split cart-total-description">Shipping<span>Free</span></p>
+		<br>
+		<p class="cart-total-split cart-total-description">Estimated tax<span>$0.00</span></p>
+		<hr>
+		<p class="cart-total-split cart-total-description">Estimated total<span>$90.00</span></p>
+		<a href="#checkout"><button class="cart-button">Checkout</button></a>
+	</div>
+
+
+
+</body>
+</html>
