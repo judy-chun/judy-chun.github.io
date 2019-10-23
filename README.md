@@ -1,1 +1,2 @@
 # judy-chun.github.io
+I added a layer of interactivity throughout all the pages on the site, including active hover states, after state on what each of the elements (buttons, drop down menu items) would look like after a click event has happened. I also added responsiveness to the design by having the elements stack when the browser width is small. I also added checked state and unchecked state for the checkbox items within the collapse and expand menu. }
