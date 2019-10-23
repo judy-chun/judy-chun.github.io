@@ -1,0 +1,165 @@
+<!----------------------------
+Name: Judy Chun
+product.html is the individual product detail page 
+
+----------------------------->
+<html>
+<head>
+	<!-- Linking to the CSS stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/homework_5.css"></link>
+	<!-- Linking to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Linking to the JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+	<hr class="top-bar" size="50"/>
+	<!-- Creating the top sticky navigation bar with menu items -->
+	<div class="navbar">
+		<a class="navbar-link home-button" href="home_page.html">FLUFF STUFF</a>
+		<!-- Positioning the navigation menu items in the center -->
+		<div class="navbar-center">
+			<a class="navbar-link active-title" href="shop.html">Shop</a>
+			<a class="navbar-link" href="#sale">Sale</a>
+			<a class="navbar-link" href="#track">Track Orders</a></li>
+		</div>
+		<!-- Aligning the navigation menu items to the right -->
+		<div class="navbar-right">
+			<a class="navbar-link" href="cart.html"><img src="img/bag_icon.png">   My Bag</a>
+			<a class="navbar-link" href="#search"><img src="img/search_icon.png">   Search</a>
+		</div>
+	</div>
+
+	<!-- Aliging the back button and text -->
+	<div class="back-nav">
+		<a href="home_page.html"><img class="back-button" src="img/back_button.png">
+		<span>Back</span></a>
+	</div>
+
+	<!-- Placing the product images -->
+	<div class="product-image-space">
+		<!-- Positioning small images: width 20% -->
+		<div class="product-small-image">
+			<img class="small-image" src="img/product_2.png" style="cursor:pointer">
+			<img class="small-image" src="img/product_3.png" style="cursor:pointer">
+			<img class="small-image" src="img/product_4.png" style="cursor:pointer">
+		</div>
+		<!-- Positioning large image: width 45% -->
+		<div class="product-large-image">
+			<img class="large-image" src="img/yellow_pillow.jpeg" style="cursor:pointer">
+		</div>
+		<!-- Position product description: width 30% -->
+		<div class="product-description">
+			<p class="product-name">Couch Pillow</p>
+			<!-- Adding filled and unfilled heart ratings -->
+			<img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-filled.png"><img src="img/heart-unfilled.png">
+			<!-- Placing the item price and description -->
+			<p class="item-price">$40.00</p>
+			<p class="item-description">Made with 100% cotton & down features inside - perfect for your house!</p>
+			<!-- Adding color buttons with inactive and active state -->
+			<button class ="color-button button-active" id="button-after-school"></button>
+			<button class ="color-button" id="button-morning-haze"></button>
+			<button class ="color-button" id="button-rainy-day"></button>
+			<button class ="color-button" id="button-cozy-denim"></button>
+			<br><br>
+
+			<!-- Adding drop down menu for color and material with button class-->
+			<div class="color-dropdown">
+				<div class="color-dropdown-button" id="color-dropdown-display">After School
+					<div class="right-float">						
+						<img src="img/dropdown_icon.png">
+						<span class="color-square-display" id="button-after-school"></span>
+					</div>
+				</div>
+				<!-- Putting content for drop down menu with color swatch images-->
+				<div class="color-dropdown-content" tabindex="-1">
+					<div class="hidden">After School
+						<span class="color-square" id="button-after-school"></span>
+					</div>
+					<div>Morning Haze
+						<span class="color-square" id="button-morning-haze"></span>
+					</div>
+					<div>Rainy Day
+						<span class="color-square" id="button-rainy-day"></span>
+					</div>
+					<div>Cozy Denim
+						<span class="color-square" id="button-cozy-denim"></span>
+					</div>
+				</div>
+			</div>
+			<br><br>
+
+			<!-- Adding drop down menu for color and material with button class-->
+			<div class="material-dropdown">
+				<div class="material-dropdown-button" id="material-dropdown-display">Duck Down
+					<div class="right-float">						
+						<img src="img/dropdown_icon.png">
+						<span class="color-square-display" style="visibility: hidden"></span>
+					</div>
+				</div>
+				<!-- Putting content for drop down menu-->
+				<div class="material-dropdown-content" tabindex="-1">
+					<div class="material-item hidden" id="button-duck-down">Duck Down</div>
+					<div class="material-item" id="button-hypoallergenic-poly-blend">Hypoallergenic Poly Blend</div>
+					<div class="material-item" id="button-memory-foam">Memory Foam</div>
+				</div>
+			</div>
+
+			<!-- Adding a user input field to provide quantity-->
+			<div class="text-field">
+				Quantity: 
+				<select id="quantity-menu">
+					<option value="1-item">1</option>
+					<option value="2-item">2</option>
+					<option value="3-item">3</option>
+					<option value="4-item">4</option>
+					<option value="5-item">5</option>
+					<option value="6-item">6</option>
+					<option value="7-item">7</option>
+					<option value="8-item">8</option>
+					<option value="9-item">9</option>
+					<option value="10-item">10</option>
+				</select>
+			</div>
+			<br>
+
+			<!-- Adding a button for adding to cart-->
+			<a href="#cart"><button class="add-cart" onclick="processProduct()">Add to Cart</button></a><br><br>
+			<span id="added"></span>
+			
+		</div>
+
+		<!-- Adding a horizontal line-->
+		<hr style="margin-top: 20px; margin-bottom: 20px">
+
+		<!-- Adding image grid for recommended pillows-->
+		<div class="recommendation-shop">
+			<h2 style="padding-left: 6px">People also bought</h2>
+			<!-- Putting thumbnail images side by side -->
+			<div class="image-row">
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<a class="image-link" href="product.html"><img src="img/pillow_1.png" alt="Couch pillow" style="width:100%"></a>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<a class="image-link" href="product.html"><img src="img/pillow_2.png" alt="Round pillow" style="width:100%"></a>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<a class="image-link" href="product.html"><img src="img/pillow_3.png" alt="Bed pillow" style="width:100%"></a>
+				</div>
+				<div class="image-column">
+					<!-- Setting the hover state of thumbnail images by raising opacity -->
+					<a class="image-link" href="product.html"><img src="img/pillow_4.png" alt="Floor poof" style="width:100%"></a>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+</body>
+</html>
+
+

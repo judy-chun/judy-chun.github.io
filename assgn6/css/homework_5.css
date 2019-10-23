@@ -1,0 +1,693 @@
+/**********************************
+
+Name: Judy Chun;
+
+**********************************/
+
+/* Creating a top static black line */
+.top-bar {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	background: #000000;
+}
+
+/* Specifying the font size and type for body content */
+body {
+	font-size: 20px;
+	font-family: sans-serif; 
+}
+
+/* Positioning and setting general style for top sticky navigation bar */
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #ffffff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+/* Customizing the navigation menu items in terms of padding and size */
+.navbar a {
+	float: left;
+	color: #000000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/* Centering the navigation menu items in the middle */
+.navbar-center {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+
+/* Aligning the navigation menu items to the right */
+.navbar-right {
+	float: right !important;
+	margin-top: 9px;
+}
+
+/* Customizes navigation links */
+.navbar-link {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+
+/* Setting the hover state for navigation menu items */
+.navbar-link:hover {
+	color: black;
+	border-bottom: solid 4px;
+}
+
+/* Shifting the margin spacing for search item */
+#navbar-search {
+	margin-top: 3px;
+}
+
+/* Setting the active state for current page */
+.active-title {
+	color: black;
+	border-bottom: solid 4px;
+	margin-bottom: 5px;
+	padding-bottom: 8px;
+}
+
+/* Customizing the home button as a bigger font */
+.home-button {
+	font-family: sans-serif; 
+	font-size: 40px !important;
+	font-weight: lighter;
+}
+
+/* Customizing the layout of the image thumbnails */
+* {
+	box-sizing: border-box;
+}
+
+/* Customizing the layout of the image thumbnails */
+.image-column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+/* Customizing the layout of the image thumbnails */
+.image-row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Changing the opacity of hover state on thumbnail images */
+.image-link:hover {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+/* Allows for resizing when browser dimensions change */
+@media screen and (max-width: 500px) {
+	.image-column {
+		width: 100%;
+	}
+}
+
+/* Styling the collapsible menu items */
+.collapse-menu {
+	background-color: #ffffff;
+	color: black;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+/* Setting hover states for collapsible menu items */
+.collapse-menu:hover {
+	background-color: #eeeeee;
+}
+
+/* Credit to w3schools.com for custom checkbox implementation */
+
+/* Repositions and formats the checkbox items as a whole */
+.checkbox-wrapper {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	margin-left: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	-webkit-user-select: none;
+}
+
+/* Hides the browser's default checkbox format */
+.checkbox-wrapper input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Custom checkmark with width and height */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: #eeeeee;
+}
+
+/* On hover state, creating a grey background */
+.checkbox-wrapper:hover input ~ .checkmark {
+	background-color: #BEBEBE;
+}
+
+/* When the checkbox appears, adding a darker grey background */
+.checkbox-wrapper input:checked ~ .checkmark {
+	background-color: #696969;
+}
+
+/* Hiding the checkmark indicator when it's not checked */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Display the checkmark once checked */
+.checkbox-wrapper input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Customizing the checkmark */
+.checkbox-wrapper .checkmark:after {
+	left: 9px;
+	top: 5x;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+}
+
+/* Setting the customized color of the checkbox */
+#check-after-school {
+	background-color: #FFC700;
+}
+
+/* Setting the customized color of the checkbox */
+#check-morning-haze {
+	background-color: #BCD3FF;
+}
+
+/* Setting the customized color of the checkbox */
+#check-cozy-denim {
+	background-color: #277EFF;
+}
+
+/* Setting the customized color of the checkbox */
+#check-rainy-day {
+	background-color: #9A8AFF;
+}
+
+/* Setting the collapsible menu width */
+.menu-main {
+	width: 30%;
+	float: left;
+}
+
+/* Setting the image grid layout width */
+.shop-main {
+	width: 70%;
+	float: right;
+	padding-top: 30px;
+}
+
+/* Positioning shop header */
+.shop-header {
+	width: 100%;
+	position: inline;
+	height: 7%;
+}
+
+/* Positioning shop image grid */
+.shop-grid {
+	width: 100%;
+	position: inline;
+}
+
+/* Customizing the drop down menu */
+.shop-sort-menu {
+	float: right;
+	font-family: sans-serif;
+	background-color: #eeeeee;
+	color: #000000;
+	border-color: #000000;
+	padding: 8px 16px;
+	height: 70%;
+	font-size: 15px;
+}
+
+/* Customizing the drop down menu for quantity selection*/
+#quantity-menu {
+	font-family: sans-serif;
+	background-color: #eeeeee;
+	color: #000000;
+	border-color: #000000;
+	padding: 8px 16px;
+	height: 70%;
+	font-size: 15px;
+}
+
+/* Customizing the font for item description */
+.item-title {
+	font-size: 18px;
+}
+
+/* Customizing the font for item pricing */
+.item-price {
+	font-size: 19px;
+	font-weight: bolder;
+}
+
+/* Shared properties between ALL (inactive) buttons */
+.color-button {
+	border: 2px solid grey;
+	padding: 20px;
+	display: inline-block;
+	cursor: pointer;
+	margin: 16px 2px 4px 2px;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+/* Remove opacity on hover */
+.color-button:hover {
+	opacity: 1;
+}
+
+/* What an active button looks like (will override some of the inactive properties) */
+.button-active {
+	border: 2px solid black;
+	opacity: 1 !important;
+}
+
+/* Tailoring specific buttons (yellow color) */
+#button-after-school {
+	background-color: #FFC700;
+}
+
+/* Tailoring specific buttons (morning haze color) */
+#button-morning-haze {
+	background-color: #BCD3FF;
+}
+
+/* Tailoring specific buttons (rainy day color) */
+#button-rainy-day {
+	background-color: #9A8AFF;
+}
+
+/* Tailoring specific buttons (cozy-denim color) */
+#button-cozy-denim {
+	background-color: #277EFF;
+}
+
+/* Positioning the back button */
+.back-nav {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Customizing the back button link to home page */
+.back-nav a {
+	color: black;
+	text-decoration: none;
+}
+
+/* Aligning the back button to text */
+.back-button {
+	vertical-align: middle;
+}
+
+
+/* Setting width of image space */
+.product-image-space {
+	width: 100%;
+	display: inline-block;
+	min-height: 100px;
+}
+
+/* Dynamically resizing large image */
+.large-image {
+	/*height: 441px;*/
+	/*margin: 3px 3px;*/
+	max-width: 100%;
+}
+
+/* Dynamically resizing small images */
+.small-image {
+	max-width: 100%;
+	/*height: 114px;*/
+	/*margin: 3px 3px;*/
+	display: inline-block;
+}
+
+/* Setting small image space */
+.product-small-image {
+	width: 20%;
+	display: inline-block;
+	top: 0px;
+	vertical-align: top;
+	max-width: 20%;
+}
+
+/* Setting large image space */
+.product-large-image {
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 45%;
+}
+
+/* Setting image description space */
+.product-description {
+	margin-left: 30px;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 30%;
+}
+
+/* Customizing the product title */
+.product-name {
+	margin-top: 0;
+	font-size: 22px;
+}
+
+/* Customizing the product description */
+.item-description {
+	font-size: 19px;
+	font-weight: lighter;
+}
+
+/* Color swatch for dropdown menu */
+.color-square {
+	height: 25px;
+	width: 25px;
+	background-color: black;
+	display: inline-block;
+	float: right;	
+	vertical-align: middle;	
+}
+
+/* Color swatch for dropdown main button */
+.color-square-display {
+	height: 25px;
+	width: 25px;
+	background-color: black;
+	display: inline-block;
+	float: right;	
+	vertical-align: middle;
+}
+
+/* Hides object */
+.hidden {
+	display: none !important;
+}
+
+/* FLoat right */
+.right-float {
+	float: right;
+}
+
+/* Positioning the dropdown */
+.color-dropdown, .material-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Customizing the color and text of the dropdown button */
+.color-dropdown-button, .material-dropdown-button {
+	background-color: #ffffff;
+	color: #000000;
+	padding: 16px;
+	font-size: 16px;
+	text-align: left;
+	border: 1px solid grey;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 200px;
+	height: 60px;
+}
+
+/* Shift images up a little bit */
+.right-float > img {
+	top: -3px;
+	position: relative;
+}
+
+/* Displaying the dropdown menu content and setting shadow for dropdown */
+.color-dropdown-content, .material-dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/* Removing blue border from drowndown menu when focused */
+.color-dropdown-content:focus, .material-dropdown-content:focus {
+	outline: 0;
+}
+
+/* Customizing the text in dropdown menu */
+.color-dropdown-content div, .material-dropdown-content div {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	font-weight: lighter;
+	width: 100%;
+	text-align: left;
+}
+
+/* Setting the hover state for dropdown menu */
+.color-dropdown-content div:hover, .material-dropdown-content div:hover {
+	background-color: #cfcfcf;
+}
+
+/* Setting the position of color swatch images in dropdown 
+.color-dropdown-content img {
+	float: right;
+}
+
+/* Displaying the content when hover state of button is selected */
+.color-dropdown-content-hover, .material-dropdown-content-hover {
+	display: block;
+}
+
+/* Setting the hover state color for dropdown menu button */
+.color-dropdown:hover .color-dropdown-button, .material-dropdown:hover .material-dropdown-button {
+	/*background-color: #f5f5f5;*/
+	border: 1px solid black;
+	color: black;
+}
+
+/* Customizing the text field */
+.text-field {
+	width: 100%;
+	position: inline;
+	height: 7%;
+	padding-top: 20px;
+	font-size: 16px;
+}
+
+/* Customizing the add to cart button */
+.add-cart {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 16px;
+	font-size: 16px;
+	text-align: middle;
+	border: 1px solid grey;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 200px;
+	height: 60px;
+}
+
+/* Displays the header for item and price */
+.split-header {
+	display: block;
+}
+
+/* Aligns the header labelings for item and price to left and right */
+.split-header span{
+	display: block;
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+/* Aligns the Shopping bag header to the left */
+.cart-header {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+/* Aligns the list of items in cart to the left */
+.cart-body {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+/* Display shopping cart item in grid layout */
+.cart-item {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 20px;
+}
+
+.grid-item1 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.grid-item2 {
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.grid-item3 {
+	grid-column-start: 4;
+	grid-column-end: 8;
+}
+
+.grid-item4 {
+	grid-column-start: 8;
+	grid-column-end: 9;
+}
+
+/* Customizing the shopping cart header */
+.cart-item-header {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+/* Customizing the cart description */
+.cart-item-description {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 17px;
+	font-weight: lighter;
+}
+
+/* Customizing the remove labeling */
+.cart-remove-item {
+	font-family: sans-serif;
+	color: #57BEF5;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+/* Customizing the quantity labeling */
+.cart-quantity {
+	font-family: sans-serif;
+	color: #57BEF5;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+/* Customizing the price labeling */
+.cart-item-price {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	text-align: right;
+}
+
+/* Customizing the cart total labeling */
+.cart-total {
+	width:30%;
+	float: right;
+}
+
+/* Splitting the layout of cart total in left and right side */
+.cart-total-split {
+	display: block;
+}
+
+/* Positioning the right side of the cart total */
+.cart-total-split span{
+	display: block;
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+/* Customizing the cart description */
+.cart-total-description {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+/* Customizing the checkout button */
+.cart-button {
+	width: 100%;
+	background-color: #000000;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: lighter;
+	border-radius: 4px;
+	height: 40px;
+}
+
+/* Customizing the ID of the added string status */
+#added {
+	font-family: sans-serif;
+	color: #000000;
+	font-size: 18px;
+	font-weight: lighter;
+}
+ /* Remove blue border on all buttons */
+button:focus {
+	outline: 0;
+}
+
+/* Remove blue border on all selects */
+select:focus {
+	outline: 0;
+}
+
