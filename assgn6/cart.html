@@ -7,7 +7,10 @@ cart.html is the shopping bag page
 <head>
 	<!-- Linking to the CSS stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/homework_5.css"></link>
+	<!-- Linking to jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Linking to JavaScript -->
+	<script type="text/javascript" src="js/script.js"></script>
 	
 </head>
 
@@ -45,58 +48,19 @@ cart.html is the shopping bag page
 
 	<!-- Creating content for cart -->
 	<div class="cart-body">
-		<!-- Creating a grid container to place item details inside cart-->
-		<div class="cart-item">
-			<div class="grid-item1">
-				<a href="product.html"><img src="img/cart_item_2.png" alt="Couch Pillow"></a>
-			</div>
-			<div class="grid-item2">
-				<p class="cart-item-header">Couch Pillow</p>
-				<br>
-				<p class="cart-item-description">Material: Duck Down<br><br>Color: After School</p>
-				<br>
-				<p class="cart-remove-item">Remove</p>	
-			</div>
-			<div class="grid-item3">
-				<p class="cart-quantity">Quantity 1<img src="img/expand-more.png" style="vertical-align:middle"></p>
-			</div>
-			<div class="grid-item4">
-				<p class="cart-item-price">$40.00</p>
-			</div>
-		</div>
-		<br>
-		<hr>
-		<br>
-		<div class="cart-item">
-			<div class="grid-item1">
-				<a href="product.html"><img src="img/cart_item_1.png" alt="Couch Pillow"></a>
-			</div>
-			<div class="grid-item2">
-				<p class="cart-item-header">Bed Pillow</p>
-				<br>
-				<p class="cart-item-description">Material: Duck Down<br><br>Color: After School</p>
-				<br>
-				<p class="cart-remove-item">Remove</p>
-			</div>
-			<div class="grid-item3">
-				<p class="cart-quantity">Quantity 1<img src="img/expand-more.png" style="vertical-align:middle"></p>
-			</div>
-			<div class="grid-item4">
-				<p class="cart-item-price">$50.00</p>
-			</div>
-		</div>
+		<!--<div id="placeholder"></div>-->
 	</div>
 	<br>
 	<hr>
 	<br>
 	<div class="cart-total">
-		<p class="cart-total-split cart-total-description">Subtotal<span>$90.00</span></p>
+		<p class="cart-total-split cart-total-description">Subtotal<span id="subtotal">$90.00</span></p>
 		<br>
-		<p class="cart-total-split cart-total-description">Shipping<span>Free</span></p>
+		<p class="cart-total-split cart-total-description">Shipping<span id="shipping">Free</span></p>
 		<br>
-		<p class="cart-total-split cart-total-description">Estimated tax<span>$0.00</span></p>
+		<p class="cart-total-split cart-total-description">Estimated tax (PA 6%)<span id="tax">$0.00</span></p>
 		<hr>
-		<p class="cart-total-split cart-total-description">Estimated total<span>$90.00</span></p>
+		<p class="cart-total-split cart-total-description">Estimated total<span id="total">$90.00</span></p>
 		<a href="#checkout"><button class="cart-button">Checkout</button></a>
 	</div>
 

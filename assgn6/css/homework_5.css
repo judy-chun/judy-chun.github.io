@@ -601,7 +601,7 @@ body {
 }
 
 /* Customizing the cart description */
-.cart-item-description {
+.cart-item-material, .cart-item-color {
 	font-family: sans-serif;
 	color: #000000;
 	font-size: 17px;
@@ -690,4 +690,3 @@ button:focus {
 select:focus {
 	outline: 0;
 }
-
